@@ -9,7 +9,7 @@ steps:
   - --source=.
   - --trigger-http
   - --runtime=python39
-  - --allow-unauthenticated
   - --entry-point=cleaner
   - --min-instances=1
   - --memory=128MB
+  - --allow-unauthenticated
