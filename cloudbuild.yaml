@@ -23,11 +23,6 @@ steps:
     entrypoint: 'bash'
     args: ['-c', 'docker run cleaner_app pytest']
 
-# Run unit tests
-- name: python
-  entrypoint: python
-  args: ["-m", "pytest", "--junitxml=${SHORT_SHA}_test_log.xml"]
-
 # Deploy function
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   args:
