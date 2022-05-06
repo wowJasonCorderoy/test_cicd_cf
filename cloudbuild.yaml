@@ -24,17 +24,17 @@ steps:
     args: ['-c', 'docker run cleaner_app pytest']
 
 # Deploy function
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  args:
-  - gcloud
-  - functions
-  - deploy
-  - cleaner
-  - --region=us-central1
-  - --source=.
-  - --trigger-http
-  - --runtime=python39
-  - --entry-point=cleaner
-  - --min-instances=1
-  - --memory=128MB
-  - --allow-unauthenticated
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+    - gcloud
+    - functions
+    - deploy
+    - cleaner
+    - --region=us-central1
+    - --source=.
+    - --trigger-http
+    - --runtime=python39
+    - --entry-point=cleaner
+    - --min-instances=1
+    - --memory=128MB
+    - --allow-unauthenticated
