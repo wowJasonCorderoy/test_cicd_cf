@@ -1,6 +1,9 @@
 import re
 
 def cleaner(requests):
+    """
+    cleans strings replaces nums chars with underscores.
+    """
     try:
         x_str = request.form.get('text')
     except:
