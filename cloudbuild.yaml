@@ -15,7 +15,7 @@ steps:
     - gcloud
     - functions
     - deploy
-    - cleaner
+    - secret_length
     - --region=us-central1
     - --source=.
     - --trigger-http
@@ -24,3 +24,4 @@ steps:
     - --min-instances=1
     - --memory=128MB
     - --allow-unauthenticated
+    - --set-secrets=ibm-creds=ibm-planning-creds:latest
