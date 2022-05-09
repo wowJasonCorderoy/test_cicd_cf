@@ -7,7 +7,7 @@ def cleaner(requests):
     cleans strings replaces nums chars with underscores.
     """
     try:
-        x_str = request.form.get('text')
+        x_str = requests.form.get('text')
     except:
         x_str = requests['text']
     clean_str = re.sub('[^a-zA-Z0-9]', '_', x_str)
