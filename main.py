@@ -12,7 +12,7 @@ def cleaner(requests):
         x_str = requests['text']
     clean_str = re.sub('[^a-zA-Z0-9]', '_', x_str)
     print(clean_str)
-    return clean_str
+    return {'clean_str':clean_str}
 
 def secret_length(requests):
     """
@@ -22,6 +22,7 @@ def secret_length(requests):
     ibm_creds = json.loads(os.environ[env_var_ibm_creds])
     url = ibm_creds['url']
     print(len(url))
+    return {'url_length':len(url)}
 
 if __name__ == "__main__":
     #cleaner()
